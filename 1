@@ -1,0 +1,35 @@
+'''
+Sample Input 0
+
+1
+1
+1
+2
+
+Sample Output 0
+
+[[0, 0, 0], [0, 0, 1], [0, 1, 0], [1, 0, 0], [1, 1, 1]]
+'''
+# -------------------------------------------------------------------------------------------------------
+
+if __name__ == '__main__':
+    x = int(input())
+    y = int(input())
+    z = int(input())
+    n = int(input())
+    lst_fin=[]
+    for i in range(0,x+1):
+      for j in range(0,y+1):
+        for k in range(0,z+1):
+          #print(f"i is: {i}")
+          #print(f"j is: {j}")
+          #print(f"k is: {k}")
+          lst = [i, j, k]
+          lst_fin.append(lst)
+    #print(lst_fin)
+    ans_lst = []
+    for z in lst_fin:
+      #s = lst_fin[0] + lst_fin[1] + lst_fin[2]
+      if(sum(z) != n):
+        ans_lst.append(z)
+    print(ans_lst)
